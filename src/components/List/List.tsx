@@ -25,7 +25,7 @@ const List = (props: ListProps) => {
     setSearchStr(value);
     if (value.length) {
       setListData(
-        data.filter((item) => item.title.toLowerCase().indexOf(value) > 0)
+        data.filter((item) => item.title.toLowerCase().indexOf(value) >= 0)
       );
     } else {
       setListData(data);
