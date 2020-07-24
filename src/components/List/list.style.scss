@@ -12,8 +12,14 @@
   }
   span {
       display: inline-block;
-      margin: 5px;
       cursor: pointer;
+      margin-right: 5px;
+
+      svg {
+          width: 26px;
+          fill: white;
+          vertical-align: middle;
+      }
   }
 
   input {

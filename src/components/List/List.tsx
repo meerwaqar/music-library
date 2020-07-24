@@ -3,6 +3,9 @@ import "./list.style.scss";
 import GridItem from "../GridItem";
 import { TrackType } from "../../pages/AudioList/AudioList.type";
 
+import { ReactComponent as GridIcon } from "../../resources/icons/gridicon.svg";
+import { ReactComponent as ListIcon } from "../../resources/icons/listicon.svg";
+
 interface ListProps {
   data: Array<TrackType>;
   listView?: "grid" | "list";
@@ -37,9 +40,9 @@ const List = (props: ListProps) => {
       <div className="top-bar list-padding">
         <span>
           {isGridView ? (
-            <span onClick={() => setIsGridView(false)}>G</span>
+            <GridIcon onClick={() => setIsGridView(false)} />
           ) : (
-            <span onClick={() => setIsGridView(true)}>L</span>
+            <ListIcon onClick={() => setIsGridView(true)} />
           )}
         </span>
         <input
