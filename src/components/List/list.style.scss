@@ -1,0 +1,38 @@
+@import "../../resources/style/colors.scss";
+
+.list-main {
+  color: $primary;
+  background: $appBackground;
+  width: 100%;
+  min-height: 60vh;
+
+  .top-bar {
+    text-align: right;
+    border-bottom: 1px solid black;
+  }
+  span {
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+  }
+
+  input {
+      background: black;
+      color: white;
+      border: 1px solid $appBackground;
+      height: 22px;
+      padding-left: 5px;
+
+  }
+
+  .main {
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
+  .list-padding {
+    padding: 5px 10px;
+  }
+}

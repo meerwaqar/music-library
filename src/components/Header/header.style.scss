@@ -1,0 +1,10 @@
+@import "../../resources/style/colors.scss";
+
+header {
+    width: 100%;
+    height: 10vh;
+    padding: 1rem;
+    background: $appBackground;
+    color: $primary;
+    border-bottom: 2px solid black;
+}

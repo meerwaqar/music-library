@@ -1,0 +1,13 @@
+@import "../../resources/style/colors.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.side-menu {
+    min-height: 60vh;
+    background-color: $navbarBackground;
+}
+ main {
+ }

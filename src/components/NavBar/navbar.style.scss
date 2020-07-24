@@ -1,0 +1,36 @@
+@import "../../resources/style/colors.scss";
+
+.nav-bar {
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    
+
+    li {
+        display: block;
+        color: $primary;
+        padding: 8px 8px;
+        text-decoration: none;
+        cursor: pointer;
+    
+        &.active {
+          color: $secondary;
+          border-bottom: 1px solid $secondary;
+          cursor: default;
+        }
+    
+        &:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+      }
+  }
+
+  .children {
+    padding: 1rem;
+    background-color: $navbarBackground;
+  }
+
+}
