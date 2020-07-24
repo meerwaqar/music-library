@@ -9,18 +9,20 @@
   .top-bar {
     text-align: right;
     border-bottom: 1px solid black;
+    
+    span {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 5px;
+  
+        svg {
+            width: 26px;
+            fill: white;
+            vertical-align: middle;
+        }
+    }
   }
-  span {
-      display: inline-block;
-      cursor: pointer;
-      margin-right: 5px;
-
-      svg {
-          width: 26px;
-          fill: white;
-          vertical-align: middle;
-      }
-  }
+  
 
   input {
       background: black;

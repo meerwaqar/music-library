@@ -1,0 +1,20 @@
+@import "../../resources/style/colors.scss";
+
+.list-item {
+    padding: 1rem;
+    margin-bottom: 7px;
+    border: 1px solid $secondary;
+    cursor: pointer;
+
+    span {
+        &.label{
+            font-size: 1rem;
+            font-weight: 500;
+            margin-right: 2vw;
+        }
+        &.album{
+            font-size: 1rem;
+            font-weight: 200;
+        }
+    }
+}

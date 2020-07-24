@@ -5,6 +5,7 @@ import { TrackType } from "../../pages/AudioList/AudioList.type";
 
 import { ReactComponent as GridIcon } from "../../resources/icons/gridicon.svg";
 import { ReactComponent as ListIcon } from "../../resources/icons/listicon.svg";
+import ListItem from "../ListItem";
 
 interface ListProps {
   data: Array<TrackType>;
@@ -20,8 +21,7 @@ const List = (props: ListProps) => {
 
   useEffect(() => {
     if (data.length) setListData(data);
-    setIsGridView(listView === "grid");
-  }, [data, listView]);
+  }, [data]);
 
   const onSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -52,20 +52,25 @@ const List = (props: ListProps) => {
         />
       </div>
       <div className="main list-padding">
-        {isGridView ? (
-          <div className="grid">
-            {listData.map((item, index) => (
+        <div className={isGridView ? "grid" : "list"}>
+          {listData.map((item, index) =>
+            isGridView ? (
               <GridItem
                 cover={item.cover}
                 label={item.title}
                 key={`grid-item${index}`}
                 onClick={() => onItemClick({ item, index })}
               />
-            ))}
-          </div>
-        ) : (
-          <div className="list"></div>
-        )}
+            ) : (
+              <ListItem
+                label={item.title}
+                album={item.album}
+                key={`grid-item${index}`}
+                onClick={() => onItemClick({ item, index })}
+              />
+            )
+          )}
+        </div>
       </div>
     </div>
   );
