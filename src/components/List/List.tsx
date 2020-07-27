@@ -40,9 +40,9 @@ const List = (props: ListProps) => {
       <div className="top-bar list-padding">
         <span>
           {isGridView ? (
-            <GridIcon onClick={() => setIsGridView(false)} />
+            <ListIcon onClick={() => setIsGridView(false)} />
           ) : (
-            <ListIcon onClick={() => setIsGridView(true)} />
+            <GridIcon onClick={() => setIsGridView(true)} />
           )}
         </span>
         <input
